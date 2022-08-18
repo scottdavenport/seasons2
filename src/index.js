@@ -1,7 +1,5 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-const container = document.querySelector('#root');
-const root = createRoot(container);
 
 const App = () => {
 	window.navigator.geolocation.getCurrentPosition(
@@ -12,4 +10,4 @@ const App = () => {
 	return <div>Hi There!</div>;
 };
 
-root.render(<App />);
+createRoot(document.querySelector('#root')).render(<App />);
